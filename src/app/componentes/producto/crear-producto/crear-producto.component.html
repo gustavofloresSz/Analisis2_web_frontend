@@ -1,0 +1,46 @@
+<div class="max-w-lg mx-auto p-4 bg-white shadow-md rounded-lg">
+    <form #productoForm="ngForm">
+      <div class="mb-4">
+        <label for="nombre" class="block text-gray-700 font-bold mb-2">Nombre del Producto:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          [(ngModel)]="producto.nombre"
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+        />
+      </div>
+  
+      <div class="mb-4">
+        <label for="precio" class="block text-gray-700 font-bold mb-2">Precio:</label>
+        <input
+          type="number"
+          id="precio"
+          name="precio"
+          [(ngModel)]="producto.precio"
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+        />
+      </div>
+  
+      <div class="mb-4">
+        <label for="stock" class="block text-gray-700 font-bold mb-2">Stock:</label>
+        <input
+          type="number"
+          id="stock"
+          name="stock"
+          [(ngModel)]="producto.stock"
+          required
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+        />
+      </div>
+  
+      <button (click)="onSubmit()"
+        type="submit"
+        class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+      >
+        Guardar Producto
+      </button>
+    </form>
+</div>

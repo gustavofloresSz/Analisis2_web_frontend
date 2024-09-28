@@ -1,0 +1,25 @@
+<!-- component -->
+<div class="flex min-h-screen justify-center">
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow-md rounded-xl">
+        <thead>
+          <tr class="bg-blue-gray-100 text-gray-700">
+            <th class="py-3 px-4 text-left">cantidad</th>
+            <th class="py-3 px-4 text-left">fecha</th>
+            <th class="py-3 px-4 text-left">cliente</th>
+            <th class="py-3 px-4 text-left">producto</th>
+          </tr>
+        </thead>
+        <tbody class="text-blue-gray-900">
+          @for (item of data; track $index) {
+            <tr class="border-b border-blue-gray-200">
+              <td class="py-3 px-4">{{item.cantidad}}</td>
+              <td class="py-3 px-4">{{item.fecha}}</td>
+              <td class="py-3 px-4">{{item.cliente.nombre}}</td>
+              <td class="py-3 px-4">{{item.producto.nombre}}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>

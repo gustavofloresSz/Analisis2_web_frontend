@@ -1,0 +1,39 @@
+<div class="flex min-h-screen flex-row bg-gray-100 text-gray-800">
+  <aside class="sidebar w-50 -translate-x-full transform bg-white p-4 transition-transform duration-150 ease-in md:translate-x-0 md:shadow-md">
+    <div class="my-4 w-full border-b-4 border-indigo-100 text-center">
+      <p class="font-bold mb-2">ANALISIS Y DISEÑO 2</p>
+    </div>
+    
+    <div class="grid grid-cols-1 gap-4">
+      <div class="p-4 bg-white border rounded shadow">
+        <p class="font-bold mb-2">Clientes</p>
+        <div>
+          <a class="block text-blue-500 hover:text-blue-800" routerLink="crear">Crear Cliente</a>
+          <a class="block text-blue-500 hover:text-blue-800" routerLink="mostrar">Mostrar Cliente</a>
+        </div>
+      </div>
+      
+      <div class="p-4 bg-white border rounded shadow">
+        <p class="font-bold mb-2">Productos</p>
+        <div>
+          <a class="block text-blue-500 hover:text-blue-800" routerLink="registrar">Registrar Producto</a>
+          <a class="block text-blue-500 hover:text-blue-800" routerLink="mostrarProducto">Mostrar Productos</a>
+        </div>
+      </div>
+      
+      <div class="p-4 bg-white border rounded shadow">
+        <p class="font-bold mb-2">Ordenes</p>
+        <div>
+          <a class="block text-blue-500 hover:text-blue-800" routerLink="registrarOrdenes">Registrar Órdenes</a>
+          <a class="block text-blue-500 hover:text-blue-800" routerLink="mostrarOrdenes">Mostrar Órdenes</a>
+        </div>
+      </div>
+    </div>
+    
+  </aside>
+  <main class="main -ml-48 flex flex-grow flex-col p-4 transition-all duration-150 ease-in md:ml-0">
+    <div class="flex h-full items-center justify-center bg-white shadow-md">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
